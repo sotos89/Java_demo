@@ -1,4 +1,4 @@
-package gr.aueb.elearn.builder;
+package gr.aueb.elearn.ch4.factorypattern;
 
 
 public class BookAdv implements ShoppingItem {
@@ -7,7 +7,7 @@ public class BookAdv implements ShoppingItem {
     private String pubYear;
 
     //static factory method
-    public static BookAdv getInstance(){
+    static BookAdv getInstance(){
         return new BookAdv();
     }
 

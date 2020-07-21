@@ -1,50 +1,39 @@
-package gr.aueb.elearn.transactions;
+package gr.aueb.elearn.ch4.factorypattern;
 
-public class CD implements ShoppingItem{
+public class CDAdv implements ShoppingItem {
     private String cdId;
     private String cdTitle;
     private String cdProducer;
 
-    /**
-     * default constructor
-     */
-    public CD(){
+    //static factory method
+    static CDAdv getInstance(){
+        return new CDAdv();
     }
 
-    /**
-     * υπερφορτωμέμος constructor
-     * @param cdId
-     * @param cdTitle
-     * @param cdProducer
-     */
-    public CD(String cdId, String cdTitle, String cdProducer) {
+    // Builder Design Pattern
+    public CDAdv id(String cdId){
         this.cdId = cdId;
+        return this;
+    }
+
+    public CDAdv title(String cdTitle){
         this.cdTitle = cdTitle;
+        return this;
+    }
+
+    public CDAdv cdProducer(String cdProducer){
         this.cdProducer = cdProducer;
+        return this;
     }
 
     public String getCdId() {
         return cdId;
     }
-
-    public void setCdId(String cdId) {
-        this.cdId = cdId;
-    }
-
     public String getCdTitle() {
         return cdTitle;
     }
-
-    public void setCdTitle(String cdTitle) {
-        this.cdTitle = cdTitle;
-    }
-
     public String getCdProducer() {
         return cdProducer;
-    }
-
-    public void setCdProducer(String cdProducer) {
-        this.cdProducer = cdProducer;
     }
 
     @Override

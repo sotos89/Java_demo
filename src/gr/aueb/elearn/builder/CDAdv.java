@@ -5,10 +5,12 @@ public class CDAdv implements ShoppingItem {
     private String cdTitle;
     private String cdProducer;
 
+    //static factory method
     public static CDAdv getInstance(){
         return new CDAdv();
     }
 
+    // Builder Design Pattern
     public CDAdv id(String cdId){
         this.cdId = cdId;
         return this;

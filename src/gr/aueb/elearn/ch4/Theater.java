@@ -6,6 +6,7 @@ public class Theater implements ITheater {
     private int seatsPerRow;
     private Seat[][] seats;
 
+    //constructor
     public Theater(String theaterName, int rows, int seatsPerRow){
         this.theaterName = theaterName;
         this.rows = rows;
@@ -27,10 +28,10 @@ public class Theater implements ITheater {
     }
 
     /**
-     *
+     * @author Giannis Sotiris
      * @param seatNumber ο αριθμός θέσης
-     * @return
-     * @throws IsReservedException
+     * @return true αν γίνει το reservation
+     * @throws IsReservedException Αν η θέση είναι ηδη reserved
      */
     @Override
     public boolean reservedSeat(String seatNumber) throws IsReservedException {

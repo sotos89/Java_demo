@@ -10,6 +10,7 @@ public class Book implements ShoppingItem {
         private String bookAuthor;
         private String pubYear;
 
+        // Builder Design Pattern
         public Builder bookTitle(String bookTitle){
             this.bookTitle = bookTitle;
             return this;
@@ -24,11 +25,14 @@ public class Book implements ShoppingItem {
             this.pubYear = pubYear;
             return this;
         }
+
+        // Factory method
         public Book build(){
             return new Book(this);
         }
     }
 
+    // Constructor
     public Book(Builder builder){
         this.bookAuthor = builder.bookAuthor;
         this.bookTitle = builder.bookTitle;

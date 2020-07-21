@@ -1,13 +1,22 @@
 package gr.aueb.elearn.transactions;
 
-public class Book implements ShoppingItem{
+public class Book implements ShoppingItem {
     private String bookTitle;
     private String bookAuthor;
     private String pubYear;
 
+    /**
+     * default constructor
+     */
     public Book() {
     }
 
+    /**
+     * υπερφορτωμέμος constructor
+     * @param bookTitle
+     * @param bookAuthor
+     * @param pubYear
+     */
     public Book(String bookTitle, String bookAuthor, String pubYear) {
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;

@@ -1,7 +1,7 @@
 package gr.aueb.elearn.transactions;
 
 /**
- * Marker interface
+ * Marker interface δεν έχει καμία μέθοδο
  */
 public interface ShoppingItem {
 }

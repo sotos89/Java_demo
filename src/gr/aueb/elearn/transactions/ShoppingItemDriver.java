@@ -7,10 +7,11 @@ public class ShoppingItemDriver {
 
         Transactions.saveTransactionItem(book1);
         Transactions.saveTransactionItem(cd1);
+
         System.out.println("Book transactions");
         Transactions.showBookTransactions();
-        System.out.println("\ncd transactions");
 
+        System.out.println("\ncd transactions");
         Transactions.showCDTransactions();
 
 //        Transactions.showTransactions();

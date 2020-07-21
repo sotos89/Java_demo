@@ -1,6 +1,5 @@
 package gr.aueb.elearn.builderpattern;
 
-import java.awt.*;
 
 public class ShoppingItemDriver {
 

@@ -16,8 +16,8 @@ public class TrilizaDriver {
 
 
         do {
-            System.out.println("paizei o paiktis " + i);
-            System.out.println("Dose thesi x, y");
+            System.out.println("παίζει ο παίκτης " + i);
+            System.out.println("Δώστε θέση x, y");
             try{
                 if(++time == 10) break;
                 x = in.nextInt();
@@ -32,12 +32,13 @@ public class TrilizaDriver {
                 i = (done) ? i : (i % 2 == 0) ? 1 : 2;
 
             }catch (InputMismatchException e1 ){
-                System.out.println("parakalw deste arithmous");
+                System.out.println("Παρακαλώ δώστε αριθμούς");
+                in.nextLine();
             }catch (ValueOutOfBoundsException e2){
-                System.out.println("dwse arithmo entws oriwn");
+                System.out.println("Δώστε αριθμό εντώς ορίων");
             }
 
         }while (!done);
-        System.out.println("egine triliza!! kerdise o paiktis " + i);
+        System.out.println("Έγινε Τρίλιζα!! Κέρδισε ο παικτης " + i);
     }
 }
