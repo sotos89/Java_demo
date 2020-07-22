@@ -22,15 +22,15 @@ public class AddParticipantToTrainingServicesImpl implements IAddParticipantToTr
 
     @Override
     public void addParticipantToTraining(TraineeDTO traineeDTO, TrainingDTO trainingDTO) throws TrainingFullyBookedException {
-//        Training training, newTraining;
-//        Trainee trainee, newTrainee;
+        Training training, newTraining;
+        Trainee trainee, newTrainee;
 
         try {
-            Trainee trainee = extractTrainee(traineeDTO);
-            Trainee newTrainee = new Trainee(trainee);
+            trainee = extractTrainee(traineeDTO);
+            newTrainee = new Trainee(trainee);
 
-            Training training = extractTraining(trainingDTO);
-            Training newTraining = new Training(training);
+            training = extractTraining(trainingDTO);
+            newTraining = new Training(training);
 
             if (training.getTrainees().size() < 25){
                 newTraining.addTrainee(trainee);
@@ -43,6 +43,7 @@ public class AddParticipantToTrainingServicesImpl implements IAddParticipantToTr
             }
 
         } catch (TraineeNotFoundException | TrainingUnavailableException e) {
+            System.out.println(e.getMessage() );
             e.printStackTrace();
         }
     }
